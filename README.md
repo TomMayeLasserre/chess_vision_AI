@@ -1,1 +1,14 @@
 # chess_vision_AI
+
+## AI Model Weights
+
+The model weights required to run this project are available for download on Google Drive. Please follow the steps below to set up the weights in the `model_weights` folder.
+
+1. **Download the Weights**:
+   - Download the weight files from the following link: [Model Weights Folder](https://drive.google.com/drive/folders/1G2VA3MNB89z0uDn6LtDao64N-vRlIaWH?usp=sharing)
+
+2. **Place the Files**:
+   - After downloading, move both `.pt` files into the `model_weights` folder within your project directory.
+   - Make sure the files are correctly named according to the model specifications in the code.
+
+By following these steps, you’ll ensure the model weights are set up correctly for use in this project.
