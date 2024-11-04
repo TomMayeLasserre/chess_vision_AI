@@ -50,12 +50,19 @@ Run with a webcam or an image:
 
 ### Key Arguments
 
-- `--weights1` & `--weights2`: YOLO weights for board corners and pieces.
-- `--display_corners`: Display detected corners.
-- `--display_best_moves`: Show Stockfish's recommended moves.
+- `--source`: Path to the image or stream (e.g., `data/images` for an image directory, or `0` for the default webcam).
+- `--display_corners`: Display detected board corners on the output image.
+- `--display_boxes`: Show bounding boxes around each detected piece.
+- `--display_coordinates`: Display coordinates of each detected piece on the board.
+- `--display_best_moves`: Show Stockfish's recommended moves on the output.
+- `--display_evaluations`: Display move strength evaluations for each side.
+- `--view_img`: Show the annotated output in a separate window.
 
 ## Examples
 
 ```bash
 python chess_vision_ai.py --source 0 --display_corners --display_best_moves --stockfish_path "path/to/stockfish"
 ```
+
+Training
+Weights for both models were trained using Colab, jupyter available in jupyter_training
