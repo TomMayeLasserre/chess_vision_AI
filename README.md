@@ -6,10 +6,10 @@
 ## Demo Images
 
 ### Overview Demo:
-![Demo Image](test_data/images/demo.png)
+![Demo Image](https://github.com/user-attachments/assets/3abda9cd-c7c8-458f-8d23-beedcc34e0d5)
 
 ### Chessboard Detection:
-![Chessboard Demo](test_data/images/chessboard_demo.png)
+![Chessboard Demo](https://github.com/user-attachments/assets/6b4e0919-926d-4a6a-b517-849f8689d428)
 
 ## Features
 
@@ -80,24 +80,24 @@ Weights for the detection models were trained on Google Colab, and the Jupyter n
 ## Algorithm Overview
 
 1. **Corner Detection**: Identify the four corners of the chessboard.  
-   ![Corners Demo](test_data/images/demo_corners.jpg)
+   ![Corners Demo](https://github.com/user-attachments/assets/412aa5ab-86b7-4eda-9709-339d3ea30260)
 
 2. **Piece Detection**: Recognize pieces and their bounding boxes.  
-   ![Pieces Demo](test_data/images/demo_boxes.jpg)
+   ![Pieces Demo](https://github.com/user-attachments/assets/91b0a7c0-e779-4ab8-b3c8-0cd9282db9c0)
 
 3. **Calculate Coordinates**: Obtain center coordinates for each detected piece.  
-   ![Coordinates Demo](test_data/images/demo_coordinates.jpg)
+   ![Coordinates Demo](https://github.com/user-attachments/assets/3abda9cd-c7c8-458f-8d23-beedcc34e0d5)
 
 4. **Homography Transformation**: Transform the board to a top-down view using the detected corners.  
-   ![Homography Demo](test_data/images/demo_homographie.jpg)
+   ![Homography Demo](https://github.com/user-attachments/assets/199e5a67-7d3f-451b-bbce-57d1c4823226)
 
 5. **Board Orientation**: Ensure correct board orientation by matching colors and identifying king locations.  
-   ![Orientation Demo](test_data/images/demo_reoriente.jpg)
+   ![Orientation Demo](https://github.com/user-attachments/assets/0dce9b5b-80ee-4a36-bf69-c1fb0a7ba5f2)
 
 6. **Square Mapping and FEN Positioning**: Convert piece positions into FEN notation.
 
 7. **Move Analysis**: Display current board position and run it through Stockfish to find the best move.  
-   ![Final Demo](test_data/images/demo_final.jpg)
+   ![Final Demo](https://github.com/user-attachments/assets/f38c41d4-aa4e-4c08-b1b0-d312ecf97c79)
 
 ---
 
