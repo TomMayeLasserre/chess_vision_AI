@@ -1,31 +1,61 @@
-# chess_vision_AI
 
-## AI Model Weights
+# chess_vision_ai
 
-The model weights required to run this project are available for download on Google Drive. Please follow the steps below to set up the weights in the `model_weights` folder.
+**chess_vision_ai** is an AI-powered tool for real-time chess analysis. It leverages computer vision to detect board and pieces from images or video and integrates the Stockfish chess engine to recommend moves. Perfect for analyzing games, reviewing plays, and gaining insights in real-time.
 
-1. **Download the Weights**:
-   - Download the weight files from the following link: [Model Weights Folder](https://drive.google.com/drive/folders/1G2VA3MNB89z0uDn6LtDao64N-vRlIaWH?usp=sharing)
+## Features
 
-2. **Place the Files**:
-   - After downloading, move both `.pt` files into the `model_weights` folder within your project directory.
-   - Make sure the files are correctly named according to the model specifications in the code.
+- **Board and Piece Detection**: Detects the chessboard and pieces' positions from images or video streams.
+- **Move Prediction**: Analyzes board state and recommends the best moves via Stockfish.
+- **Real-time Display**: Continuously updates and displays the game state with annotated moves and evaluations.
+- **Custom Visualization**: Highlights recommended moves on a virtual chessboard.
 
-By following these steps, you’ll ensure the model weights are set up correctly for use in this project.
+## Installation
 
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your_username/chess_vision_ai.git
+   cd chess_vision_ai
+   ```
+2. Install the required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
+### AI Model Weights
 
-## Setting Up Stockfish
+1. **Download Weights**: Download model weights from [Google Drive](https://drive.google.com/drive/folders/1G2VA3MNB89z0uDn6LtDao64N-vRlIaWH?usp=sharing).
+2. **Place Files**: Move both `.pt` files to `model_weights` in the project directory with correct names as specified in the code.
 
-This project requires the Stockfish chess engine to evaluate and predict the best moves. Please follow the instructions below to download and set it up.
+### Stockfish Setup
 
-1. **Download Stockfish**:
-   - Go to the official Stockfish website: [Stockfish Download Page](https://stockfishchess.org/download/).
-   - Choose the version for **Windows (x86-64)** and download the executable file named `stockfish-windows-x86-64.exe`.
+1. **Download Stockfish**: Visit [Stockfish Download Page](https://stockfishchess.org/download/) and download the `stockfish-windows-x86-64.exe` file for Windows.
+2. **Place Executable**: Place it in a `stockfish` folder within the project directory, ensuring the `stockfish_path` points to:
+   ```python
+   stockfish_path = "stockfish/stockfish-windows-x86-64.exe"
+   ```
 
-2. **Place the Executable**:
-   - After downloading, place the `stockfish-windows-x86-64.exe` file in a folder named `stockfish` within the project directory.
-   - The `stockfish_path` in the code should look like this:
-     ```python
-     stockfish_path = "stockfish/stockfish-windows-x86-64.exe"
-     ```
+## Usage
+
+Run with a webcam or an image:
+
+- **Using Webcam**:
+  ```bash
+  python chess_vision_ai.py --source 0
+  ```
+- **Analyzing an Image**:
+  ```bash
+  python chess_vision_ai.py --source "path/to/image.jpg"
+  ```
+
+### Key Arguments
+
+- `--weights1` & `--weights2`: YOLO weights for board corners and pieces.
+- `--display_corners`: Display detected corners.
+- `--display_best_moves`: Show Stockfish's recommended moves.
+
+## Examples
+
+```bash
+python chess_vision_ai.py --source 0 --display_corners --display_best_moves --stockfish_path "path/to/stockfish"
+```
