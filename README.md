@@ -70,7 +70,7 @@ Run the program with a webcam or an image:
 
 #### Example Usage
 ```bash
-python predict.py --source test_data/board_exemple.jpg --view_img  --display_best_moves --display_evaluations
+python predict.py --source board_exemple.jpg --view_img  --display_best_moves --display_evaluations
 ```
 
 ## Training
