@@ -6,7 +6,7 @@
 ## Demo Images
 
 ### Overview Demo:
-![Demo Image](https://github.com/user-attachments/assets/3abda9cd-c7c8-458f-8d23-beedcc34e0d5)
+![image](https://github.com/user-attachments/assets/fe41f41c-d542-4b91-8128-33dd4fe519bc)
 
 ### Chessboard Detection:
 ![Chessboard Demo](https://github.com/user-attachments/assets/6b4e0919-926d-4a6a-b517-849f8689d428)
@@ -22,8 +22,8 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your_username/chess_vision_ai.git
-   cd chess_vision_ai
+   git clone https://github.com/TomMayeLasserre/chess_vision_AI.git
+   cd chess_vision_AI
    ```
 
 2. Install the required packages:
@@ -50,12 +50,12 @@ Run the program with a webcam or an image:
 
 - **Using Webcam**:
   ```bash
-  python chess_vision_ai.py --source 0
+  python chess_vision_ai.py --source 0 --view_img  --display_best_moves --display_evaluations
   ```
 
 - **Analyzing an Image**:
   ```bash
-  python chess_vision_ai.py --source "path/to/image.jpg"
+  python predict.py --source "path/to/image.jpg" --view_img  --display_best_moves --display_evaluations
   ```
 
 ### Key Arguments
@@ -70,7 +70,7 @@ Run the program with a webcam or an image:
 
 #### Example Usage
 ```bash
-python chess_vision_ai.py --source 0 --display_corners --display_best_moves --stockfish_path "path/to/stockfish"
+python predict.py --source test_data/board_exemple.jpg --view_img  --display_best_moves --display_evaluations
 ```
 
 ## Training
